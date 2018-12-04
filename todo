@@ -1,0 +1,7 @@
+
+- init scrips under c/*
+- write script to copy flat list from snapshots
+- write c/sync sctipt
+  - sync from mobile into MyGallery (if mobile is connected)
+  - sync from MyGallery to MyDrive (if MyDrive is connected)
+
