@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+declare -A dict
+dict[meizu]="meizu"
+
+src=$1
+
+if [ -z $src ]; then
+  echo "Missing source"
+  exit 1
+fi
+
+if [ $src = "meizu" ]; then
+  echo "===Fetching from $src..."
+  adb pull -p -a /sdcard/DCIM "./sort/$src/`date +%d.%m.%Y`"
+else
+  echo "Unknown source: $src"
+  exit 1
+fi
+
